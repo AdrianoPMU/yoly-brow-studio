@@ -31,7 +31,8 @@ window.SITE = {
 <style>
 /* hero */
 .hero{position:relative;background:var(--night);color:var(--cream);overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:url(/media/hero.jpg) center 30%/cover;opacity:.28}
+.hero::before{content:"";position:absolute;inset:0;background:url(/media/hero.jpg) center 22%/cover;opacity:.42}
+@media(min-width:900px){.hero::before{background-position:center 28%;background-size:auto 160%;background-repeat:no-repeat}}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(78,54,50,.35),rgba(78,54,50,.92) 75%)}
 .hero .wrap{position:relative;z-index:1;padding-top:64px;padding-bottom:64px;text-align:center}
 @media(min-width:768px){.hero .wrap{padding-top:96px;padding-bottom:96px}}
