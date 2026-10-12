@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Estás a un paso | Yoly Brow Studio</title>
+<script>
+/* If the quiz redirected inside its frame, take over the whole page */
+try { if (window.top !== window.self) window.top.location.href = location.href; } catch (e) {}
+</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234E3632'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='34' text-anchor='middle' fill='%23FBF6F3'%3EY%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/funnel.css">
+<script>
+/* ============ SETTINGS — edit here ============ */
+window.SITE = {
+  artist: 'Yoly',
+  pixelId: '1642823290759521',
+  // Explainer video (Marisol voiceover). Keep unlockSeconds about equal to its length.
+  // Or a YouTube/Vimeo embed URL. Empty = placeholder card.
+  videoUrl: '',
+  videoPoster: '/media/diseno.jpg',
+  unlockSeconds: 100,   // match the video length. Add ?test=1 to the URL to unlock in 5s.
+  beforeAfter: [
+    { before: '/media/ba-2-antes.jpg', after: '/media/ba-2-despues.jpg' },
+    { before: '/media/ba-4-antes.jpg', after: '/media/ba-4-despues.jpg' },
+    { before: '/media/ba-3-antes.jpg', after: '/media/ba-3-despues.jpg' }
+  ]
+};
+</script>
+<style>
+.stepper{display:flex;justify-content:center;align-items:center;gap:8px;padding:18px 16px 0;font-size:12px;font-weight:500;color:var(--muted)}
+.stepper .s{display:flex;align-items:center;gap:6px}
+.stepper .d{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--linen);background:var(--card);font-size:11px;font-weight:600}
+.stepper .done .d{background:var(--gold);border-color:var(--gold);color:#fff}
+.stepper .on{color:var(--night)}
+.stepper .on .d{background:var(--night);border-color:var(--night);color:var(--cream)}
+.stepper .bar{width:28px;height:1px;background:var(--linen)}
+.top{padding:28px 0 64px}
+.top h1{font-size:40px;margin-top:14px}
+@media(min-width:768px){.top h1{font-size:56px}}
+.top .sub{max-width:600px;margin:16px auto 0;font-size:15px;line-height:1.85;color:var(--muted)}
+.down{display:inline-block;margin-top:16px;font-size:13px;font-weight:600;color:var(--night);text-decoration:none}
+.player{margin:28px auto 0;max-width:420px;aspect-ratio:9/16;max-height:72vh;border-radius:12px;overflow:hidden;background:var(--night);position:relative;box-shadow:0 30px 60px -30px rgba(78,54,50,.6)}
+.player.wide{max-width:760px;aspect-ratio:16/9}
+.player video,.player iframe{width:100%;height:100%;object-fit:cover;border:0}
+.player .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:28px;text-align:center;color:var(--cream);background:linear-gradient(180deg,rgba(78,54,50,.1),rgba(78,54,50,.9)),var(--poster) center/cover}
+.player .ph b{font-family:Lora,Georgia,serif;font-weight:400;font-size:26px;color:var(--cream)}
+.player .ph span{font-size:12px;color:#EAD6D1;margin-top:6px}
+.lockrow{margin-top:24px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.lockrow p{font-size:13px;color:var(--muted)}
+.lockrow p b{font-variant-numeric:tabular-nums}
+#booking{margin-top:20px}
+.unlocked-msg{display:inline-block;margin-top:22px;padding:8px 14px;border-radius:999px;background:rgba(176,122,116,.15);color:var(--night);font-size:13px;font-weight:600}
+.story{display:grid;gap:30px;align-items:center}
+@media(min-width:900px){.story{grid-template-columns:1fr 1fr;gap:56px}}
+.story img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius)}
+.story p{font-size:15px;line-height:1.9;color:var(--muted);margin-top:16px}
+.close-sec{position:relative;overflow:hidden}
+.close-sec::before{content:"";position:absolute;inset:0;background:url(/media/hero.jpg) center 30%/cover;opacity:.2}
+.close-sec .wrap{position:relative}
+</style>
+</head>
+<body>
+
+<div class="topbar">Ya casi · <b>Cejas Ombré Powder a $397</b>, diseño a tu medida incluido (precio normal $550)</div>
+<header class="solo"><div class="wrap"><a href="#video" class="logo" aria-label="Yoly Brow Studio"><b>Yoly</b><small>BROW STUDIO</small></a></div></header>
+
+<main>
+  <section class="top" id="video">
+    <div class="stepper" aria-label="Progreso">
+      <span class="s done"><span class="d">✓</span>Quiz</span><span class="bar"></span>
+      <span class="s on" id="st2"><span class="d">2</span>Ver video</span><span class="bar"></span>
+      <span class="s" id="st3"><span class="d">3</span>Agendar</span>
+    </div>
+    <div class="wrap slim center">
+      <h1 class="display" id="hello">¡Muy bien! Estás a un paso.</h1>
+      <p class="sub">Antes de elegir el horario de tu consulta, mira este video corto: cómo trabaja <b>Yoly</b>, cómo es tu cita y por qué <b>nada se pigmenta hasta que tú apruebes el diseño</b>.</p>
+      <a href="#player" class="down">Mira el video corto para desbloquear tu agenda ▼</a>
+
+      <div class="player" id="player"></div>
+
+      <div class="lockrow" id="lockrow">
+        <button type="button" class="btn locked" id="lockBtn" disabled>🔒 Mira el video para desbloquear tu agenda</button>
+        <p>Tu agenda se desbloquea en <b id="timer">1:40</b></p>
+      </div>
+      <div id="booking" hidden>
+        <span class="unlocked-msg">✓ ¡Listo! Tu agenda está desbloqueada</span>
+        <div class="cta" style="margin-top:18px"><a class="btn" id="goSchedule" href="/agendar/">Elegir mi horario →</a><small>Consulta gratis de 15 minutos con Yoly</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER STACK -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="center slim" style="margin:0 auto">
+        <p class="eyebrow">Mientras ves el video</p>
+        <h2 class="display h2" style="margin-top:14px">Esto es todo lo que incluyen tus <b>$397</b></h2>
+        <p class="lead" style="margin-top:14px">Tus respuestas del quiz ya están con Yoly. Esto es lo que recibes, de la consulta hasta que tus cejas sanen.</p>
+      </div>
+      <div class="stack">
+        <article class="item"><div class="pic"><img src="/media/resultado-1.jpg" alt="Resultado de cejas Ombré Powder" loading="lazy"><span class="n">1</span></div><div><span class="badge">Incluido</span><h3>Tu procedimiento Ombré Powder completo</h3><p>Un efecto empolvado y degradado, <b>más suave al inicio y más definido hacia la cola</b>, como cejas recién maquilladas.</p></div></article>
+        <article class="item"><div class="pic"><img src="/media/ba-3-despues.jpg" alt="Diseño de cejas a la medida" loading="lazy"><span class="n">2</span></div><div><h3>Diseño y mapeo a tu medida</h3><p>La forma se dibuja según tu rostro y <b>no se aplica pigmento hasta que tú la apruebes</b>.</p></div></article>
+        <article class="item"><div class="pic"><img src="/media/diseno.jpg" alt="Yoly" loading="lazy"><span class="n">3</span></div><div><h3>Consulta gratis de 15 minutos</h3><p>Una llamada con Yoly sobre lo que buscas, tu tipo de piel y tus dudas. <b>Tus respuestas del quiz ya las tiene enfrente.</b></p></div></article>
+        <article class="item"><div class="pic"><img src="/media/resultado-2.jpg" alt="Cejas sanadas" loading="lazy"><span class="n">4</span></div><div><h3>Guía de cuidados paso a paso</h3><p>Qué hacer los días después para que <b>tus cejas sanen bonitas</b> y el color quede parejo.</p></div></article>
+      </div>
+      <p class="valueline">Diseño + procedimiento + consulta + guía de cuidados: <s>$550</s> hoy <span class="big">$397</span></p>
+      <div class="cta"><a href="#video" class="btn">Ver el video y desbloquear mi agenda ↑</a></div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="dark">
+    <div class="wrap">
+      <p class="eyebrow">Lo que sigue</p>
+      <h2 class="display h2" style="margin-top:14px">Cómo es tu experiencia</h2>
+      <div class="steps">
+        <div class="step"><span class="num">01</span><h3>Primero te escucho</h3><p>En la consulta gratis hablamos de lo que buscas, a partir de lo que respondiste en el quiz. Sin prisa y sin juicios.</p></div>
+        <div class="step"><span class="num">02</span><h3>Diseñamos juntas</h3><p>El día de tu cita mido y dibujo tu forma ideal. Lo ajustamos hasta que te encante lo que ves en el espejo.</p></div>
+        <div class="step"><span class="num">03</span><h3>Sales con tus cejas listas</h3><p>Hacemos el procedimiento <b>ese mismo día</b> y te llevas tu guía de cuidados para que sanen bonitas.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section>
+    <div class="wrap story">
+      <img src="/media/resultado-3.jpg" alt="Estudio Yoly Brow Studio" loading="lazy">
+      <div>
+        <h2 class="display h2">Como estén tus cejas hoy, desde ahí empezamos.</h2>
+        <p>Ralas, disparejas, con huecos o con un trabajo anterior que no te gustó. Yoly diseña cada ceja a la medida del rostro, sin plantillas, para que el resultado se vea natural y tuyo.</p>
+        <p>Tus $397 incluyen la consulta, el diseño, el procedimiento completo y tu guía de cuidados (precio normal $550). Sin compromiso, sin presión, y con respuesta a cada pregunta que traigas.</p>
+        <div class="cta" style="align-items:flex-start"><a href="#video" class="btn">Ver el video y desbloquear mi agenda ↑</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="center"><p class="eyebrow">Trabajos reales</p><h2 class="display h2" style="margin-top:14px">Antes y después</h2></div>
+      <div class="ba-grid" data-ba="3"></div>
+    </div>
+  </section>
+
+  <!-- CLOSE -->
+  <section class="dark close-sec">
+    <div class="wrap slim center">
+      <h2 class="display h2">Menos de dos minutos. Es todo lo que toma.</h2>
+      <p class="lead" style="margin-top:14px">Mira el video y elige tu horario. El botón para agendar se desbloquea justo debajo del video.</p>
+      <p style="margin-top:18px;font-size:13px">Cejas Ombré Powder a $397 · Diseño a tu medida incluido · <s>$550</s></p>
+      <div class="cta"><a href="#video" class="btn light">Volver al video ↑</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#video" class="logo light" aria-label="Yoly Brow Studio"><b>Yoly</b><small>BROW STUDIO</small></a>
+    <p>Salinas, CA · <a href="https://pmuacademia.com/privacidad" target="_blank" rel="noopener">Política de privacidad</a></p>
+    <a href="#video" class="btn sm light">Ver el video para desbloquear ↑</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const S = window.SITE, $ = id => document.getElementById(id);
+  const params = new URLSearchParams(location.search);
+  const fn = (params.get('fn') || params.get('first_name') || params.get('name') || '').split(' ')[0];
+  if (fn) $('hello').textContent = `¡Muy bien, ${fn.charAt(0).toUpperCase() + fn.slice(1)}! Estás a un paso.`;
+
+  // video
+  const p = $('player'), v = S.videoUrl;
+  if (!v) {
+    p.innerHTML = `<div class="ph" style="--poster:url('${S.videoPoster}')"><b>Yoly Brow Studio</b><span>Cejas Ombré Powder · Salinas, CA</span></div>`;
+  } else if (/youtube|youtu\.be|vimeo/.test(v)) {
+    p.classList.add('wide');
+    p.innerHTML = `<iframe src="${v}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Video de Yoly"></iframe>`;
+  } else {
+    p.innerHTML = `<video src="${v}" poster="${S.videoPoster}" controls playsinline preload="metadata"></video>`;
+  }
+
+  // countdown → unlock booking
+  let left = !S.videoUrl ? 0 : (params.get('test') ? 5 : S.unlockSeconds);  // no video yet: unlock right away
+  const fmt = s => Math.floor(s/60) + ':' + String(s%60).padStart(2,'0');
+  $('timer').textContent = fmt(left);
+  const unlock = () => {
+    $('lockrow').hidden = true;
+    $('goSchedule').href = '/agendar/' + location.search;
+    $('booking').hidden = false;
+    $('st2').className = 's done'; $('st2').querySelector('.d').textContent = '✓';
+    $('st3').className = 's on';
+    if (window.fbq) fbq('track', 'ViewContent', { content_name: 'Yoly booking unlocked' });
+  };
+  const t = setInterval(() => { left--; $('timer').textContent = fmt(Math.max(left,0)); if (left <= 0) { clearInterval(t); unlock(); } }, 1000);
+  // every "back to video" CTA lands on the player
+  document.querySelectorAll('a[href="#video"]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); p.scrollIntoView({ behavior: 'smooth', block: 'center' }); }));
+})();
+</script>
+<script src="/funnel.js"></script>
+</body>
+</html>

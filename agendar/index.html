@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Elige tu horario | Yoly Brow Studio</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234E3632'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='34' text-anchor='middle' fill='%23FBF6F3'%3EY%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/funnel.css">
+<script>
+/* ============ SETTINGS — edit here ============ */
+window.SITE = {
+  artist: 'Yoly',
+  bookingUrl: 'https://crm.adrianolocal.com/c/yoly-consulta',
+  pixelId: '1642823290759521',
+  beforeAfter: [
+    { before: '/media/ba-1-antes.jpg', after: '/media/ba-1-despues.jpg' },
+    { before: '/media/ba-2-antes.jpg', after: '/media/ba-2-despues.jpg' },
+    { before: '/media/ba-3-antes.jpg', after: '/media/ba-3-despues.jpg' }
+  ]
+};
+</script>
+<style>
+.stepper{display:flex;justify-content:center;align-items:center;gap:8px;padding:18px 16px 0;font-size:12px;font-weight:500;color:var(--muted)}
+.stepper .s{display:flex;align-items:center;gap:6px}
+.stepper .d{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--gold);background:var(--gold);color:#fff;font-size:11px;font-weight:600}
+.stepper .on{color:var(--night)}
+.stepper .on .d{background:var(--night);border-color:var(--night);color:var(--cream)}
+.stepper .bar{width:28px;height:1px;background:var(--linen)}
+.top{padding:28px 0 56px}
+.top-img{margin:22px auto 0;max-width:520px;aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden}
+.top-img img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.top h1{font-size:40px;margin-top:12px}
+@media(min-width:768px){.top h1{font-size:56px}}
+.top .sub{max-width:600px;margin:16px auto 0;font-size:15px;line-height:1.85;color:var(--muted)}
+.urg{font-size:12px;color:var(--muted);margin-top:4px}
+.cal-wrap{margin-top:40px;text-align:left}
+.cal-note{display:flex;gap:12px;align-items:flex-start;background:rgba(176,122,116,.12);border:1px solid var(--linen);border-radius:var(--radius);padding:14px 16px;font-size:13px;line-height:1.6;color:var(--ink)}
+.cal-note b{display:block}
+#cal{margin-top:16px;width:100%;height:900px;border:1px solid var(--linen);border-radius:var(--radius);background:var(--card)}
+@media(min-width:768px){#cal{height:760px}}
+.fb{margin-top:12px;text-align:center;font-size:12px;color:var(--muted)}
+.fb a{text-decoration:underline;text-underline-offset:3px}
+.checks{list-style:none;margin:34px auto 0;max-width:560px;display:grid;gap:12px;text-align:left}
+.checks li{display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.6}
+.checks li::before{content:"✓";flex:none;width:26px;height:26px;border-radius:50%;background:var(--gold);color:var(--night);font-weight:700;font-size:13px;display:grid;place-items:center}
+.close-sec{position:relative;overflow:hidden}
+.close-sec::before{content:"";position:absolute;inset:0;background:url(/media/resultado-3.jpg) center/cover;opacity:.2}
+.close-sec .wrap{position:relative}
+</style>
+</head>
+<body>
+
+<div class="topbar">🎉 ¡Lo lograste! · <b>Cejas Ombré Powder a $397</b> (precio normal $550)</div>
+<header class="solo"><div class="wrap"><a href="#agenda" class="logo" aria-label="Yoly Brow Studio"><b>Yoly</b><small>BROW STUDIO</small></a></div></header>
+
+<main>
+  <section class="top">
+    <div class="stepper" aria-label="Progreso">
+      <span class="s"><span class="d">✓</span>Quiz</span><span class="bar"></span>
+      <span class="s"><span class="d">✓</span>Video</span><span class="bar"></span>
+      <span class="s on"><span class="d">3</span>Agendar</span>
+    </div>
+    <div class="wrap slim center">
+      <div class="top-img"><img src="/media/diseno.jpg" alt="Yoly, Yoly Brow Studio"></div>
+      <p class="eyebrow" style="margin-top:24px">Último paso · Calificas</p>
+      <h1 class="display" id="hello">¡Felicidades! Ahora aparta tu horario.</h1>
+      <p class="sub">Ya hiciste el quiz y escuchaste a Yoly. Tus cejas Ombré Powder a <b>$397</b> te están esperando. Elige el día y la hora de tu consulta gratis de 15 minutos antes de que alguien más tome tu lugar.</p>
+      <div class="cta"><a href="#agenda" class="btn">Apartar mis cejas a $397 ↓</a><span class="urg">Los cupos a este precio son limitados cada semana. Se asignan por orden de llegada.</span></div>
+
+      <div class="cal-wrap" id="agenda">
+        <div class="cal-note"><span>⏳</span><span><b>Tu lugar no queda apartado hasta que elijas un horario.</b>El calendario muestra la disponibilidad en vivo; los horarios que se ocupan desaparecen.</span></div>
+        <iframe id="cal" title="Agenda tu consulta con Yoly"></iframe>
+        <p class="fb"><a id="calLink" target="_blank" rel="noopener">¿No carga el calendario? Ábrelo aquí</a></p>
+      </div>
+      <div class="cta"><a href="#agenda" class="btn">Elegir mi horario ahora ↑</a><small>Consulta gratis + diseño a tu medida + procedimiento · <s>$550</s> hoy $397</small></div>
+    </div>
+  </section>
+
+  <!-- OFFER STACK -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="center slim" style="margin:0 auto">
+        <p class="eyebrow">Todo incluido</p>
+        <h2 class="display h2" style="margin-top:14px">Todo lo que incluyen tus cejas de <b>$397</b></h2>
+        <p class="lead" style="margin-top:14px">Un proceso completo, desde la consulta hasta que tus cejas sanen.</p>
+      </div>
+      <div class="stack">
+        <article class="item"><div class="pic"><img src="/media/resultado-1.jpg" alt="Resultado de cejas Ombré Powder" loading="lazy"><span class="n">1</span></div><div><span class="badge">Incluido</span><h3>Tu procedimiento Ombré Powder completo</h3><p>Un efecto empolvado y degradado, <b>más suave al inicio y más definido hacia la cola</b>, como cejas recién maquilladas.</p></div></article>
+        <article class="item"><div class="pic"><img src="/media/ba-3-despues.jpg" alt="Diseño de cejas a la medida" loading="lazy"><span class="n">2</span></div><div><h3>Diseño y mapeo a tu medida</h3><p>La forma se dibuja según tu rostro y <b>no se aplica pigmento hasta que tú la apruebes</b>.</p></div></article>
+        <article class="item"><div class="pic"><img src="/media/diseno.jpg" alt="Yoly" loading="lazy"><span class="n">3</span></div><div><h3>Consulta gratis de 15 minutos</h3><p>Una llamada con Yoly sobre lo que buscas, tu tipo de piel y tus dudas. <b>Tus respuestas del quiz ya las tiene enfrente.</b></p></div></article>
+        <article class="item"><div class="pic"><img src="/media/resultado-2.jpg" alt="Cejas sanadas" loading="lazy"><span class="n">4</span></div><div><h3>Guía de cuidados paso a paso</h3><p>Qué hacer los días después para que <b>tus cejas sanen bonitas</b> y el color quede parejo.</p></div></article>
+      </div>
+      <p class="valueline">Diseño + procedimiento + consulta + guía de cuidados: <s>$550</s> hoy <span class="big">$397</span></p>
+      <div class="cta"><a href="#agenda" class="btn">Apartar mis cejas a $397 ↑</a></div>
+    </div>
+  </section>
+
+  <!-- RESULTS (real work; add reviews here once she has real ones) -->
+  <section>
+    <div class="wrap">
+      <div class="center"><p class="eyebrow">Trabajos reales</p><h2 class="display h2" style="margin-top:14px">Ellas dieron el paso. Así quedaron.</h2><p class="lead" style="margin-top:12px">Desliza para ver el antes y después.</p></div>
+      <div class="ba-grid" data-ba="3"></div>
+    </div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="alt">
+    <div class="wrap slim center">
+      <h2 class="display h2">Esto es exactamente lo que apartas con tus $397</h2>
+      <ul class="checks">
+        <li>Consulta gratis de 15 minutos con Yoly</li>
+        <li>Diseño y mapeo a la medida de tu rostro</li>
+        <li>Nada se pigmenta hasta que tú apruebes la forma</li>
+        <li>Procedimiento Ombré Powder completo el mismo día</li>
+        <li>Guía de cuidados paso a paso para que sanen bonitas</li>
+        <li>Sin presión: lo que decidas siempre es tu decisión</li>
+      </ul>
+      <div class="cta"><a href="#agenda" class="btn">Apartar mi horario ↑</a></div>
+    </div>
+  </section>
+
+  <!-- CLOSE -->
+  <section class="dark close-sec">
+    <div class="wrap slim center">
+      <h2 class="display h2">Que esta no sea la pestaña que cerraste.</h2>
+      <p class="lead" style="margin-top:14px">Ya hiciste lo difícil. Elige tu horario ahora y asegura tus cejas Ombré Powder a $397 antes de que se llenen los cupos.</p>
+      <p style="margin-top:18px;font-size:13px">Cejas Ombré Powder a $397 · <s>$550</s></p>
+      <div class="cta"><a href="#agenda" class="btn light">Ir a elegir mi horario ↑</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#agenda" class="logo light" aria-label="Yoly Brow Studio"><b>Yoly</b><small>BROW STUDIO</small></a>
+    <p>Salinas, CA · <a href="https://pmuacademia.com/privacidad" target="_blank" rel="noopener">Política de privacidad</a></p>
+    <a href="#agenda" class="btn sm light">Apartar mis cejas a $397 ↑</a>
+  </div>
+</footer>
+<div class="mobile-cta" id="mob"><a href="#agenda" class="btn">Elegir mi horario · $397</a></div>
+
+<script>
+(function(){
+  const S = window.SITE, $ = id => document.getElementById(id);
+  const params = new URLSearchParams(location.search);
+  const fn = (params.get('fn') || params.get('first_name') || params.get('name') || '').split(' ')[0];
+  if (fn) $('hello').textContent = `¡Felicidades, ${fn.charAt(0).toUpperCase() + fn.slice(1)}! Ahora aparta tu horario.`;
+  const url = S.bookingUrl + location.search;
+  $('cal').src = url; $('calLink').href = url;
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(es => es.forEach(e => { $('mob').hidden = e.isIntersecting; }), { threshold: .1 }).observe($('agenda'));
+  }
+})();
+</script>
+<script src="/funnel.js"></script>
+</body>
+</html>
